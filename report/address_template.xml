@@ -11,10 +11,10 @@
                          <div class="header-table text-center">
                             <div class="header-row">
                                 <div class="header-cell">
-                                    <h4 class="text-left">  Buyer</h4>
+                                    <h4 class="text-left">  Customer</h4>
                                 </div>
                                 <div class="header-cell">
-                                    <h4 class="text-right"> مشتر</h4>
+                                    <h4 class="text-right"> عميل</h4>
                                 </div>
                             </div>
                          </div>
@@ -39,51 +39,93 @@
                             </div>
                             <div class="table-row">
                                 <div class="col-4 table-cell">
-                                    <div class="table-cell-item text-left">Street Name</div>
+                                    <div class="table-cell-item text-left font-small">Vehicle</div>
                                 </div>
                                 <div class="table-cell">
                                     <div class="table-cell-item">
-                                        <t t-esc="o.partner_id.street"/>-
+                                        <t t-esc="o.partner_id.name"/> -
+                                        <t t-esc="lans.partner_id.name"/>
+                                    </div>
+                                </div>
+                                <div class="col-4 table-cell">
+                                    <div class="table-cell-item text-right">مركبة</div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-4 table-cell">
+                                    <div class="table-cell-item text-left ">Area</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="table-cell-item">
+                                        <t t-esc="o.partner_id.street"/> /
                                         <t t-esc="o.partner_id.street2"/>
                                     </div>
                                 </div>
                                 <div class="col-4 table-cell">
-                                    <div class="table-cell-item text-right font-small">الشارع</div>
+                                    <div class="table-cell-item text-right font-small">منطقة</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="row mb-2">
+                    <div class="col-6">
+                        <div class="table-container">
+                            <div class="table-row">
+                                <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-left font-small">Flat/Shop No.</div>
+                                </div>
+
+                                <div class="table-cell">
+                                    <div class="table-cell-item">
+                                        <t t-esc="o.partner_id.unit_number"/>
+                                    </div>
+                                </div>
+                                <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-right font-small">شقة/محل رقم</div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-left">Block</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="table-cell-item">
+                                        <t t-esc="o.partner_id.additional_number"/>
+                                    </div>
+                                </div>
+                                 <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-right">حاجز</div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-left">VAT No.</div>
+                                </div>
+                                <div class="table-cell">
+                                    <div class="table-cell-item">
+                                        <t t-esc="o.partner_id.vat"/>
+                                    </div>
+                                </div>
+                                <div class="col-3 table-cell">
+                                    <div class="table-cell-item text-right font-small" >الرقم الضريبي</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-6">
                         <div class="table-container">
                             <div class="table-row">
                                 <div class="col-3 table-cell">
                                     <div class="table-cell-item text-left">Building No.</div>
                                 </div>
-
                                 <div class="table-cell">
                                     <div class="table-cell-item">
                                         <t t-esc="o.partner_id.building_number"/>
                                     </div>
                                 </div>
                                 <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">رقم المبنى</div>
-                                </div>
-                            </div>
-                            <div class="table-row">
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-left">City</div>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="table-cell-item">
-                                        <t t-esc="o.partner_id.city"/>
-                                    </div>
-                                </div>
-                                 <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">مدينة</div>
+                                    <div class="table-cell-item text-right">لا للبناء</div>
                                 </div>
                             </div>
                             <div class="table-row">
@@ -101,36 +143,6 @@
                             </div>
                             <div class="table-row">
                                 <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-left">VAT No.</div>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="table-cell-item">
-                                        <t t-esc="o.partner_id.vat"/>
-                                    </div>
-                                </div>
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">ظريبه الشراء</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="table-container">
-                            <div class="table-row">
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-left">District</div>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="table-cell-item">
-                                        <t t-esc="o.partner_id.district"/>
-                                    </div>
-                                </div>
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">منطقة</div>
-                                </div>
-                            </div>
-                            <div class="table-row">
-                                <div class="col-3 table-cell">
                                     <div class="table-cell-item text-left">Country</div>
                                 </div>
                                 <div class="table-cell">
@@ -140,39 +152,12 @@
                                     </div>
                                 </div>
                                 <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">بلد</div>
+                                    <div class="table-cell-item text-right">دولة</div>
                                 </div>
                             </div>
-                            <div class="table-row">
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-left">Additional No</div>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="table-cell-item" >
-                                        <t t-esc="o.partner_id.additional_number" placeholder="--" />
-                                    </div>
-                                </div>
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">رقم إضافي</div>
-                                </div>
-                            </div>
-                            <div class="table-row">
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-left">Other ID</div>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="table-cell-item">
-                                        <t t-esc="o.partner_id.other_id_type"/>
-                                        <t t-esc="o.partner_id.other_id"/>
-                                    </div>
-                                </div>
-                                <div class="col-3 table-cell">
-                                    <div class="table-cell-item text-right">معرف آخر</div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-
                 </div>
 
 <!--                 </div> -->
